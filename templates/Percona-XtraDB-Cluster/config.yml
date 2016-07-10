@@ -1,0 +1,5 @@
+name: "Percona XtraDB Cluster"
+description: |
+  MySQL数据库集群
+version: 5.6.28-rancher1
+category: Databases
