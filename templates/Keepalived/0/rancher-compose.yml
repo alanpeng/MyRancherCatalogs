@@ -4,14 +4,20 @@
   description: |
     Keepalived for Rancher HA-Proxy Loadbalancer
   questions:
-    - variable: "mysql_root_password"
+    - variable: "virtual_ip"
       type: string
       required: true
       label: "Virtual Floating IP Address"
       description: "Virtual IP address given to the HA-Proxy Cluster"
-    - variable: "pxc_sst_password"
+    - variable: "check_port"
       type: string
       required: true
-      label: "listening port"
+      label: "Listening port"
       description: "The listening port of the HA-Proxy loadbalancer"   
       default: "80"
+    - variable: "network_interface"
+      type: string
+      required: true
+      label: "Network Interface"
+      description: "Network Interface of the Virtual Floating IP address (Host NIC)"
+      default: "eno16777984"
