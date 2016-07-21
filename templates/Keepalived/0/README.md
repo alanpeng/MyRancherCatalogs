@@ -1,14 +1,14 @@
-# Percona XtraDB Cluster for MySQL Server数据库集群
+# Keepalived for Rancher HA-Proxy Loadbalancer
 
 ### 信息：
 
-此模板用于在Rancher里创建一个Percona XtraDB Cluster for MySQL Server。
+此模板用于在Rancher里内置的基于HA-Proxy技术的多个LoadBalancer节点创建一个Failover高可用服务。
 
-当你从catalog部署此应用时，一个包含了三节点数据库的集群被创建，你可以预先定义数据库root密码，用户数据库名及密码。集群在三个节点间进行数据同步，属于多活体系。集群节点健康检查服务侦听在8000端口。
+当你从catalog部署此应用时，一个全局（global）的集群被创建，因此你可以在创建此Catalog时先不启动它，创建之后利用Host Lable来设置容器调度策略，以确保此HA应用运行在适合的宿主机上。
 
 ### Usage:
 
-当集群部署完毕并运行起来后，使用MySQL客户端进行连接测试：
+当集群部署完毕并运行起来后，使用在Catalog中定义好的虚拟IP地址及侦听端口访问应用。
 
-`mysql -u<db_user> -p -h<pxc>`
-例如： `mysql -u wise2c -p -h 172.20.1.10`
+`http://<Virtual IP>:<port>`
+例如：`http://172.18.1.68:3000`
