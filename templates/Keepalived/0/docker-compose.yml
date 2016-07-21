@@ -4,7 +4,7 @@ Keepalived:
   environment:
     VIRTUAL_IP: "${virtual_ip}"
     CHECK_PORT: "${check_port}"
-    VRID=150
+    VRID: 150
     INTERFACE: "${network_interface}"
   tty: true
   image: alanpeng/rancher-keepalived
