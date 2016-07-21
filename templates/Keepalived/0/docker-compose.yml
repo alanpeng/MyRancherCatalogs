@@ -11,5 +11,5 @@ Keepalived:
   stdin_open: true
   net: host
   cap_add:
-    NET_ADMIN
-    NET_BROADCAST
+    - NET_ADMIN
+    - NET_BROADCAST
