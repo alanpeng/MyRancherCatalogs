@@ -1,8 +1,8 @@
 .catalog:
-  name: "Percona XtraDB Cluster"
-  version: 5.6.28-rancher1
+  name: "Keepalived for Rancher"
+  version: 0.1
   description: |
-    Percona XtraDB Cluster 5.6.28
+    Keepalived for Rancher HA-Proxy Loadbalancer
   questions:
     - variable: "mysql_root_password"
       type: string
