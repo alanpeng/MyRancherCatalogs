@@ -9,6 +9,12 @@
       required: true
       label: "Virtual Floating IP Address"
       description: "Virtual IP address given to the HA-Proxy Cluster"
+    - variable: "netmask_bit"
+      type: string
+      required: true
+      label: "Netmask Bit"
+      description: "Network mask bits for the Virtual IP address"
+      default: "16"
     - variable: "check_port"
       type: string
       required: true
