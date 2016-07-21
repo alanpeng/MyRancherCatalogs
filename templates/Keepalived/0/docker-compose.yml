@@ -5,7 +5,7 @@ Keepalived:
     VIRTUAL_IP: "${virtual_ip}"
     CHECK_PORT: "${check_port}"
     VRID: 150
-    INTERFACE: "${network_interface}"
+    NETWORK_INTERFACE: "${network_interface}"
   tty: true
   image: alanpeng/rancher-keepalived
   stdin_open: true
