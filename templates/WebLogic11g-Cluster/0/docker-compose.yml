@@ -1,6 +1,6 @@
 ﻿AdminServer:
   ports:
-  - "${admin_port}":"${admin_port}"/tcp
+  - "${admin_port}":8001/tcp
   environment:
     AdminPort: ${admin_port}
     Server_Role: Admin
