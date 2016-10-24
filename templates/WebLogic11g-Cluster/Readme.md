@@ -15,3 +15,9 @@ Anyway, you can pull the image directly form docker hub as below:
 
 docker pull alanpeng/oracle-weblogic11g-cluster:1036
 
+Default environments for AdminServer:
+  AdminPort: '8001'
+  Server_Role: Admin
+  base_domain_default_password: '999999999'
+
+Default environments for AdminServer:  AdminPort: '8001'  Server_Role: Admin  base_domain_default_password: '999999999'
