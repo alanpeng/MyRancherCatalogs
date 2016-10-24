@@ -1,10 +1,9 @@
-# Oracle WebLogic 11g
+# Oracle WebLogic 11g Cluster
 ### Info:
 This template creates WebLogic server (10.3.6) cluster instances.
 ### Usage:
 Select 'WebLogic11g' from catalog.  Enter the required values in the configuration set. Click Launch. Your application will be ready for access soon from http://your-admin-server-address:8001/console.
 
-# Oracle-Weblogic11g-Cluster-Rancher-Catalog
 Oracle WebLogic 11g version 1036 Dockerfile for cluster deployment on Rancher.
 
 One Admin Server with volume mount on local host or NFS shared storage.
