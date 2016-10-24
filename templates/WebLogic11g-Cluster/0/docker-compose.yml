@@ -8,6 +8,7 @@ AdminServer:
   labels:
     io.rancher.scheduler.affinity:host_label: AdminServer=True
     io.rancher.container.hostname_override: container_name
+    io.rancher.scheduler.affinity:container_label_soft_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
   tty: true
   image: alanpeng/oracle-weblogic11g-cluster:1036
   volumes:
@@ -22,6 +23,7 @@ ManagedServer:
   labels:
     io.rancher.scheduler.affinity:host_label: ManagedServer=True
     io.rancher.container.hostname_override: container_name
+    io.rancher.scheduler.affinity:container_label_soft_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
   tty: true
   image: alanpeng/oracle-weblogic11g-cluster:1036
   stdin_open: true
