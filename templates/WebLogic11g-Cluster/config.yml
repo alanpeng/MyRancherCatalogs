@@ -1,5 +1,5 @@
 name: WebLogic11g
 description: |
-  Oracle WebLogic 11g with your application deployed.
+  Oracle WebLogic 11g (10.3.6) Cluster
 version: 2.6
 category: Middleware
