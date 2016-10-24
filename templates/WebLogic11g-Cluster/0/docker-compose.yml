@@ -23,5 +23,5 @@ ManagedServer:
     io.rancher.scheduler.affinity:host_label: ManagedServer=True
     io.rancher.container.hostname_override: container_name
   tty: true
-  image: alanpeng/oracle-weblogic-cluster:1036
+  image: alanpeng/oracle-weblogic11g-cluster:1036
   stdin_open: true
