@@ -1,6 +1,6 @@
 AdminServer:
   ports:
-  - "${admin_port}":8001/tcp
+  - ${admin_port}:8001/tcp
   environment:
     AdminPort: 8001
     Server_Role: Admin
@@ -14,7 +14,7 @@ AdminServer:
   - /root/WebLogic/user_projects:/root/Oracle/Middleware/user_projects
 ManagedServer:
   ports:
-  - "${managed_port}":7001/tcp
+  - ${managed_port}:7001/tcp
   environment:
     AdminPort: 8001
     Server_Role: Managed
