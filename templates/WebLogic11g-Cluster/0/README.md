@@ -22,4 +22,4 @@ Username: weblogic
 
 Default password: 999999999
 
-Default publish port for managed servers is 7001).
+Default publish port for managed servers is 7001.
