@@ -1,3 +1,9 @@
+# Oracle WebLogic 11g
+### Info:
+This template creates WebLogic server (10.3.6) cluster instances.
+### Usage:
+Select 'WebLogic11g' from catalog.  Enter the required values in the configuration set. Click Launch. Your application will be ready for access soon from http://your-admin-server-address:8001/console.
+
 # Oracle-Weblogic11g-Cluster-Rancher-Catalog
 Oracle WebLogic 11g version 1036 Dockerfile for cluster deployment on Rancher.
 
@@ -34,9 +40,3 @@ Default environments for ManagedServer:
 Please log in the WebLogic admin console by http://adminserverIP:8001 (Username: weblogic   Password: 999999999 )
 
 How ever, you can modify the AdminPort and password with your own. (Managed Server will use the default port 7001).
-
-# Oracle WebLogic 11g
-### Info:
-This template creates WebLogic server (10.3.6) cluster instances.
-### Usage:
-Select 'WebLogic11g' from catalog.  Enter the required values in the configuration set. Click Launch. Your application will be ready for access soon from http://your-admin-server-address:8001/console.
