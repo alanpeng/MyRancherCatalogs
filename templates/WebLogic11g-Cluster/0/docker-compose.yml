@@ -1,22 +1,27 @@
-wlslb:
+AdminServer:
   ports:
-  - 17002:8001
-  tty: true
-  image: rancher/load-balancer-service
-  links:
-  - wlssvc:wlssvc
-  stdin_open: true
-wlssvc:
+  - ${admin_port}:8001/tcp
   environment:
-    APPLICATION_NAME: ${application_name}
-    ARTIFACT_URL: ${artifact_url}
-    DATASOURCE_NAME: ${datasource_name}
-    DATABASE_HOST: ${database_host}
-    DATABASE_USERNAME: ${database_username}
-    DATABASE_PASSWORD: ${database_password}
+    AdminPort: 8001
+    Server_Role: Admin
+    base_domain_default_password: ${weblogic_password}
   labels:
-    io.rancher.scheduler.affinity:container_label_soft_ne: io.rancher.stack_service.name=$$$${stack_name}/$$$${service_name}
-    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: AdminServer=True
+    io.rancher.container.hostname_override: container_name
   tty: true
-  image: 192.168.18.250:5002/training/weblogic:12.2.1
+  image: alanpeng/oracle-weblogic11g-cluster:1036
+  volumes:
+  - /root/WebLogic/user_projects:/root/Oracle/Middleware/user_projects
+ManagedServer:
+  ports:
+  - ${managed_port}:7001/tcp
+  environment:
+    AdminPort: 8001
+    Server_Role: Managed
+    base_domain_default_password: ${weblogic_password}
+  labels:
+    io.rancher.scheduler.affinity:host_label: ManagedServer=True
+    io.rancher.container.hostname_override: container_name
+  tty: true
+  image: alanpeng/oracle-weblogic-cluster:1036
   stdin_open: true
