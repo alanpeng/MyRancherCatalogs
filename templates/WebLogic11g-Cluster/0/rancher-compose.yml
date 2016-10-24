@@ -4,19 +4,19 @@
   description: "Oracle WebLogic 10.3.6 Cluster"
   questions:
     - variable: "admin_port"
-      description: "Your weblogic admin console public port"
-      label: "Admin console port"
+      description: "Your weblogic admin server console published port"
+      label: "Admin server console published port"
       type: int
       required: true
       default: "8001"
     - variable: "managed_port"
-      description: "Your weblogic managed server public port"
-      label: "Admin console port"
+      description: "Your weblogic managed server published port"
+      label: "Managed server published port"
       type: int
       required: true
       default: "7001"
     - variable: "weblogic_password"
-      description: "Your weblogic admin console password"
+      description: "Your weblogic admin console password for user 'weblogic'"
       label: "Admin console password"
       type: string
       required: true
