@@ -5,11 +5,17 @@
   minimum_rancher_version: v1.0.0
   questions:
     - variable: admin_port
-      description: "Your weblogic admin console port"
+      description: "Your weblogic admin console public port"
       label: "Admin console port"
       type: "string"
       required: true
       default: 8001
+    - variable: admin_port
+      description: "Your weblogic managed server public port"
+      label: "Admin console port"
+      type: "string"
+      required: true
+      default: 7001
     - variable: weblogic_password
       description: "Your weblogic admin console password"
       label: "Admin console password"
