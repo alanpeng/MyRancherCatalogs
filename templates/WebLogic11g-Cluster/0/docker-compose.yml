@@ -2,7 +2,7 @@
   ports:
   - "${admin_port}":8001/tcp
   environment:
-    AdminPort: ${admin_port}
+    AdminPort: 8001
     Server_Role: Admin
     base_domain_default_password: ${weblogic_password}
   labels:
@@ -16,7 +16,7 @@ ManagedServer:
   ports:
   - "{managed_port}:7001/tcp
   environment:
-    AdminPort: ${admin_port}
+    AdminPort: 8001
     Server_Role: Managed
     base_domain_default_password: ${weblogic_password}
   labels:
