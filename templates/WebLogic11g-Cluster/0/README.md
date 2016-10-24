@@ -14,9 +14,12 @@ Anyway, you can pull the image directly form docker hub as below:
 
 docker pull alanpeng/oracle-weblogic11g-cluster:1036
 
-Please log in the WebLogic admin console by http://your-admin-server-address:AdminPort
-Default port: 8001
+Once the stack has been launched, please log in the WebLogic admin console by http://your-admin-server-address:AdminPort
+
+Default admin console port: 8001
+
 Username: weblogic
+
 Default password: 999999999
 
-How ever, you can modify the AdminPort and password with your own. (Managed Server will use the default publish port 7001).
+Default publish port for managed servers is 7001).
