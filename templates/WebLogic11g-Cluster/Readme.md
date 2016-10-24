@@ -32,3 +32,5 @@ Default environments for ManagedServer:
   base_domain_default_password: '999999999'
 
 Please log in the WebLogic admin console by http://adminserverIP:8001 (Username: weblogic   Password: 999999999 )
+
+How ever, you can modify the AdminPort and password with your own. (Managed Server will use the default port 7001).
