@@ -7,13 +7,13 @@
     - variable: admin_port
       description: "Your weblogic admin console public port"
       label: "Admin console port"
-      type: "string"
+      type: "int"
       required: true
       default: 8001
     - variable: managed_port
       description: "Your weblogic managed server public port"
       label: "Admin console port"
-      type: "string"
+      type: "int"
       required: true
       default: 7001
     - variable: weblogic_password
