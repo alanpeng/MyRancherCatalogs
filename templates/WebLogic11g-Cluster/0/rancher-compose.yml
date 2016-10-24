@@ -10,7 +10,7 @@
       type: "string"
       required: true
       default: 8001
-    - variable: admin_port
+    - variable: managed_port
       description: "Your weblogic managed server public port"
       label: "Admin console port"
       type: "string"
