@@ -1,4 +1,4 @@
-﻿AdminServer:
+AdminServer:
   ports:
   - "${admin_port}":8001/tcp
   environment:
