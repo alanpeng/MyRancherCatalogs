@@ -1,8 +1,8 @@
 .catalog:
   name: "WebLogic 11g Cluster"
   version: "10.3.6"
-  description: "Oracle WebLogic 10.3.6 Cluster"
-  minimum_rancher_version: v1.0.0
+  description:
+    "Oracle WebLogic 10.3.6 Cluster"
   questions:
     - variable: "admin_port"
       description: "Your weblogic admin console public port"
