@@ -10,6 +10,8 @@ v_oracle_website_user=peng.alan@gmail.com
 
 v_oracle_website_password=Docker88
 
+Source code: https://github.com/alanpeng/Oracle-Weblogic11g-Cluster
+
 Anyway, you can pull the image directly form docker hub as below:
 
 docker pull alanpeng/oracle-weblogic11g-cluster:1036
