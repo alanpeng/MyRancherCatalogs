@@ -1,6 +1,6 @@
 LB-Test:
   ports:
-  - ${check_port}:${check_port}
+  - ${check_port}:80
   labels:
     io.rancher.scheduler.affinity:host_label: AlanTestLB=True
   tty: true
