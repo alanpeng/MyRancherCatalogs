@@ -1,0 +1,5 @@
+name: "Get Loadbalancer Host IP"
+description: |
+  Get the Rancher Loadbalancer's Host IP address for the WebApp
+version: 0.1
+category: TestingDemo

@@ -1,0 +1,41 @@
+.catalog:
+  name: "Get Loadbalancer Host IP"
+  version: 0.1
+  description: |
+    Get the Rancher Loadbalancer's Host IP address for the WebApp
+  questions:
+    - variable: "virtual_ip"
+      type: string
+      required: true
+      label: "Virtual Floating IP Address"
+      description: "Virtual IP address given to the HA-Proxy Cluster"
+    - variable: "netmask_bit"
+      type: string
+      required: true
+      label: "Netmask Bit"
+      description: "Network mask bits for the Virtual IP address"
+      default: "16"
+    - variable: "check_port"
+      type: string
+      required: true
+      label: "Listening port"
+      description: "The listening port of the HA-Proxy loadbalancer"   
+      default: "80"
+    - variable: "network_interface"
+      type: string
+      required: true
+      label: "Network Interface"
+      description: "Network Interface of the Virtual Floating IP address (Host NIC)"
+      default: "eno16777984"
+LB-Test:
+  scale: 2
+  load_balancer_config:
+    haproxy_config: {}
+  health_check:
+    port: 42
+    interval: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
+WebServer:
+  scale: 2
