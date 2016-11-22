@@ -1,0 +1,5 @@
+name: Autoscaling
+description: |
+  Autoscale services by resource usage
+version: v0.0.1
+category: Features
