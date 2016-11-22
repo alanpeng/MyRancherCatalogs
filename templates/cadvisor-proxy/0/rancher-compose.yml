@@ -1,4 +1,0 @@
-.catalog:
-  name: cAdvisor Proxy
-  version: v0.0.1
-  minimum_rancher_version: v1.1.0-dev4
