@@ -1,0 +1,34 @@
+version: '2'
+.catalog:
+  name: "Nginx Load Balancer"
+  version: "1.0"
+  description: |
+    Nginx Load Balancer for Rancher
+  questions:
+    - variable: "nginxselfport"
+      type: int
+      required: true
+      label: "Nginx Self Port"
+      description: "Nginx service port"
+      default: 9999
+    - variable: "upstreamstackservice"
+      type: service
+      required: true
+      label: "Upstream Stack Service"
+      description: "Uperstream stack and service"
+    - variable: "upstreamport"
+      type: int
+      required: true
+      label: "Upstream Port"
+      description: "Upstream Port"
+      default: 8080
+    - variable: "hostport"
+      type: int
+      required: true
+      label: "Host Port"
+      description: "Host Publishing Port"
+      default: "80"
+services:
+  Nginx:
+    scale: 1
+    start_on_create: true

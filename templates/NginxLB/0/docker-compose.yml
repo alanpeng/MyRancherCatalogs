@@ -1,0 +1,15 @@
+version: '2'
+services:
+  Nginx:
+    image: 10.163.34.119/library/rancher-nginx:1.0
+    environment:
+      - Service=${upstreamstackservice}
+      - NginxSelfPort=${nginxselfport}
+      - ServicePort=${upstreamport}
+    stdin_open: true
+    tty: true
+    ports:
+    - "${hostport}:${nginxselfport}/tcp"
+    labels:
+      io.rancher.container.hostname_override: container_name
+      io.rancher.container.create_agent: 'true'

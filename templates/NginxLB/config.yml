@@ -1,0 +1,5 @@
+name: "Nginx Load Balancer"
+description: |
+  Nginx Load Balancer for Rancher
+version: "1.0"
+category: LoadBalancer
